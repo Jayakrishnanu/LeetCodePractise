@@ -36,7 +36,7 @@ public struct LinkedList<Value> {
     
     public mutating func push(_ value: Value) {
         copyNodes()
-        head = Node(value: value, next: head)
+        head = Node(value, head)
         if tail == nil {
             tail = head
         }
@@ -48,7 +48,7 @@ public struct LinkedList<Value> {
             push(value)
             return
         }
-        tail!.next = Node(value: value)
+        tail!.next = Node(value)
         tail = tail!.next
     }
     
@@ -69,7 +69,7 @@ public struct LinkedList<Value> {
             append(value)
             return tail!
         }
-        node.next = Node(value: value, next: node.next)
+        node.next = Node(value, node.next)
         return node.next!
     }
     
@@ -125,11 +125,11 @@ public struct LinkedList<Value> {
             return
         }
         
-        head = Node(value: oldNode.value)
+        head = Node(oldNode.value)
         var newNode = head
         
         while let nextOldNode = oldNode.next {
-            newNode!.next = Node(value: nextOldNode.value)
+            newNode!.next = Node(nextOldNode.value)
             newNode = newNode!.next
             oldNode = nextOldNode
         }
@@ -145,7 +145,7 @@ public struct LinkedList<Value> {
             return nil
         }
         
-        head = Node(value: oldNode.value)
+        head = Node(oldNode.value)
         var newNode = head
         var nodeCopy: Node<Value>?
         
@@ -153,7 +153,7 @@ public struct LinkedList<Value> {
             if oldNode === node {
                 nodeCopy = newNode
             }
-            newNode!.next = Node(value: nextOldNode.value)
+            newNode!.next = Node(nextOldNode.value)
             newNode = newNode!.next
             oldNode = nextOldNode
         }

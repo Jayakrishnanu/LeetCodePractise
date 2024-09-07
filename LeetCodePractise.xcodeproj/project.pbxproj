@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1894D0E92C8C922C007011B3 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0E82C8C922C007011B3 /* DynamicProgramming.swift */; };
+		1894D0EB2C8CA8F5007011B3 /* BinaryNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0EA2C8CA8F5007011B3 /* BinaryNode.swift */; };
+		1894D0ED2C8CA928007011B3 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0EC2C8CA928007011B3 /* TreeNode.swift */; };
+		1894D0F12C8CA997007011B3 /* QueueArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0F02C8CA997007011B3 /* QueueArray.swift */; };
+		1894D0F32C8CA9AD007011B3 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0F22C8CA9AD007011B3 /* Queue.swift */; };
+		1894D0F52C8CAA0E007011B3 /* QueueStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0F42C8CAA0E007011B3 /* QueueStack.swift */; };
+		1894D0F72C8CAA28007011B3 /* QueueRingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0F62C8CAA28007011B3 /* QueueRingBuffer.swift */; };
+		1894D0F92C8CAA54007011B3 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0F82C8CAA54007011B3 /* DoublyLinkedList.swift */; };
+		1894D0FB2C8CAB07007011B3 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0FA2C8CAB07007011B3 /* RingBuffer.swift */; };
 		18F1F03D2C8B72A4001E2B53 /* LeetCodePractise.docc in Sources */ = {isa = PBXBuildFile; fileRef = 18F1F03C2C8B72A4001E2B53 /* LeetCodePractise.docc */; };
 		18F1F0432C8B72A4001E2B53 /* LeetCodePractise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F1F0382C8B72A4001E2B53 /* LeetCodePractise.framework */; };
 		18F1F0482C8B72A4001E2B53 /* LeetCodePractiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1F0472C8B72A4001E2B53 /* LeetCodePractiseTests.swift */; };
@@ -30,6 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1894D0E82C8C922C007011B3 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
+		1894D0EA2C8CA8F5007011B3 /* BinaryNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryNode.swift; sourceTree = "<group>"; };
+		1894D0EC2C8CA928007011B3 /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
+		1894D0F02C8CA997007011B3 /* QueueArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueArray.swift; sourceTree = "<group>"; };
+		1894D0F22C8CA9AD007011B3 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		1894D0F42C8CAA0E007011B3 /* QueueStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueStack.swift; sourceTree = "<group>"; };
+		1894D0F62C8CAA28007011B3 /* QueueRingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRingBuffer.swift; sourceTree = "<group>"; };
+		1894D0F82C8CAA54007011B3 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		1894D0FA2C8CAB07007011B3 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
 		18F1F0382C8B72A4001E2B53 /* LeetCodePractise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeetCodePractise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F1F03B2C8B72A4001E2B53 /* LeetCodePractise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodePractise.h; sourceTree = "<group>"; };
 		18F1F03C2C8B72A4001E2B53 /* LeetCodePractise.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LeetCodePractise.docc; sourceTree = "<group>"; };
@@ -89,6 +107,15 @@
 				18F1F0582C8B7AB2001E2B53 /* LinkedListQuestions.swift */,
 				18F1F0542C8B72E5001E2B53 /* Node.swift */,
 				18F1F05A2C8BA11A001E2B53 /* Array&String.swift */,
+				1894D0E82C8C922C007011B3 /* DynamicProgramming.swift */,
+				1894D0EA2C8CA8F5007011B3 /* BinaryNode.swift */,
+				1894D0EC2C8CA928007011B3 /* TreeNode.swift */,
+				1894D0F02C8CA997007011B3 /* QueueArray.swift */,
+				1894D0F22C8CA9AD007011B3 /* Queue.swift */,
+				1894D0F42C8CAA0E007011B3 /* QueueStack.swift */,
+				1894D0F62C8CAA28007011B3 /* QueueRingBuffer.swift */,
+				1894D0F82C8CAA54007011B3 /* DoublyLinkedList.swift */,
+				1894D0FA2C8CAB07007011B3 /* RingBuffer.swift */,
 			);
 			path = LeetCodePractise;
 			sourceTree = "<group>";
@@ -213,10 +240,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F1F05B2C8BA11A001E2B53 /* Array&String.swift in Sources */,
+				1894D0E92C8C922C007011B3 /* DynamicProgramming.swift in Sources */,
 				18F1F0552C8B72E5001E2B53 /* Node.swift in Sources */,
+				1894D0F72C8CAA28007011B3 /* QueueRingBuffer.swift in Sources */,
+				1894D0F12C8CA997007011B3 /* QueueArray.swift in Sources */,
+				1894D0FB2C8CAB07007011B3 /* RingBuffer.swift in Sources */,
+				1894D0F92C8CAA54007011B3 /* DoublyLinkedList.swift in Sources */,
 				18F1F0532C8B72B5001E2B53 /* LinkedList.swift in Sources */,
+				1894D0F32C8CA9AD007011B3 /* Queue.swift in Sources */,
+				1894D0F52C8CAA0E007011B3 /* QueueStack.swift in Sources */,
 				18F1F0592C8B7AB2001E2B53 /* LinkedListQuestions.swift in Sources */,
 				18F1F03D2C8B72A4001E2B53 /* LeetCodePractise.docc in Sources */,
+				1894D0EB2C8CA8F5007011B3 /* BinaryNode.swift in Sources */,
+				1894D0ED2C8CA928007011B3 /* TreeNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
