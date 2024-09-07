@@ -27,9 +27,9 @@ public struct LinkedList<Value> {
     }
     
     public mutating func linkedListToArray(_ node: Node<Value>) -> [Value?] {
-        var nodeValues: [Value] = [node.value]
+        var nodeValues: [Value] = [node.val]
         while let node = node.next {
-            nodeValues.append(node.value)
+            nodeValues.append(node.val)
         }
         return nodeValues
     }
@@ -82,7 +82,7 @@ public struct LinkedList<Value> {
                 tail = nil
             }
         }
-        return head?.value
+        return head?.val
     }
     
     @discardableResult
@@ -102,7 +102,7 @@ public struct LinkedList<Value> {
         }
         prev.next = nil
         tail = prev
-        return current.value
+        return current.val
     }
     
     @discardableResult
@@ -114,7 +114,7 @@ public struct LinkedList<Value> {
             }
             node.next = node.next?.next
         }
-        return node.next?.value
+        return node.next?.val
     }
     
     private mutating func copyNodes() {
@@ -125,11 +125,11 @@ public struct LinkedList<Value> {
             return
         }
         
-        head = Node(oldNode.value)
+        head = Node(oldNode.val)
         var newNode = head
         
         while let nextOldNode = oldNode.next {
-            newNode!.next = Node(nextOldNode.value)
+            newNode!.next = Node(nextOldNode.val)
             newNode = newNode!.next
             oldNode = nextOldNode
         }
@@ -145,7 +145,7 @@ public struct LinkedList<Value> {
             return nil
         }
         
-        head = Node(oldNode.value)
+        head = Node(oldNode.val)
         var newNode = head
         var nodeCopy: Node<Value>?
         
@@ -153,7 +153,7 @@ public struct LinkedList<Value> {
             if oldNode === node {
                 nodeCopy = newNode
             }
-            newNode!.next = Node(nextOldNode.value)
+            newNode!.next = Node(nextOldNode.val)
             newNode = newNode!.next
             oldNode = nextOldNode
         }
@@ -211,6 +211,6 @@ extension LinkedList: Collection {
     }
     
     public subscript(position: Index) -> Value {
-        position.node!.value
+        position.node!.val
     }
 }

@@ -24,11 +24,11 @@ public class LinkedListQuestions {
         
         while l1 != nil || l2 != nil || carry != 0 {
             var sum = carry
-            if let l1Val = l1?.value {
+            if let l1Val = l1?.val {
                 sum += l1Val
             }
             
-            if let l2Val = l2?.value {
+            if let l2Val = l2?.val {
                 sum += l2Val
             }
             
@@ -69,7 +69,7 @@ public class LinkedListQuestions {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         if list1 == nil { return list2 }
         if list2 == nil { return list1 }
-        if list1!.value < list2!.value {
+        if list1!.val < list2!.val {
             list1!.next = mergeTwoLists(list1, list2)
             return list1
         } else {
@@ -104,10 +104,10 @@ public class LinkedListQuestions {
         dummy?.next = head
         var current = dummy
         
-        while let nextVal = current?.next?.value, let nextNextVal = current?.next?.next?.value {
+        while let nextVal = current?.next?.val, let nextNextVal = current?.next?.next?.val {
             if nextVal == nextNextVal {
                 let duplicate = nextVal
-                while current?.next != nil && current?.next?.value == duplicate {
+                while current?.next != nil && current?.next?.val == duplicate {
                     current?.next = current?.next?.next
                 }
             } else {
@@ -124,7 +124,7 @@ public class LinkedListQuestions {
         var look = head
         
         while look != nil {
-            if let value = look?.value, value < x {
+            if let value = look?.val, value < x {
                 let node = ListNode(value)
                 node.next = current?.next?.next
                 current?.next = node
@@ -223,7 +223,7 @@ public class LinkedListQuestions {
         var nodeArray: [Int] = []
         var head = head
         while let node = head {
-            nodeArray.append(node.value)
+            nodeArray.append(node.val)
             head = head?.next
         }
         var i = 0, j = nodeArray.count - 1
@@ -244,7 +244,7 @@ public class LinkedListQuestions {
         var current = head
         
         while current != nil {
-            if current?.value == val {
+            if current?.val == val {
                 previous?.next?.next = current?.next
                 head = previous == nil ? current?.next : head
             } else {
@@ -261,7 +261,7 @@ public class LinkedListQuestions {
         var node = head
         
         while node != nil {
-            freq[node!.value, default: 0] += 1
+            freq[node!.val, default: 0] += 1
             node = node!.next
         }
         

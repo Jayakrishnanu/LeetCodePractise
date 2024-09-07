@@ -16,6 +16,8 @@
 		1894D0F72C8CAA28007011B3 /* QueueRingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0F62C8CAA28007011B3 /* QueueRingBuffer.swift */; };
 		1894D0F92C8CAA54007011B3 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0F82C8CAA54007011B3 /* DoublyLinkedList.swift */; };
 		1894D0FB2C8CAB07007011B3 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0FA2C8CAB07007011B3 /* RingBuffer.swift */; };
+		1894D0FD2C8CC1B9007011B3 /* BinaryNodeProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0FC2C8CC1B9007011B3 /* BinaryNodeProblems.swift */; };
+		1894D0FF2C8CCB17007011B3 /* BinaryTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0FE2C8CCB17007011B3 /* BinaryTreeTest.swift */; };
 		18F1F03D2C8B72A4001E2B53 /* LeetCodePractise.docc in Sources */ = {isa = PBXBuildFile; fileRef = 18F1F03C2C8B72A4001E2B53 /* LeetCodePractise.docc */; };
 		18F1F0432C8B72A4001E2B53 /* LeetCodePractise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F1F0382C8B72A4001E2B53 /* LeetCodePractise.framework */; };
 		18F1F0482C8B72A4001E2B53 /* LeetCodePractiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1F0472C8B72A4001E2B53 /* LeetCodePractiseTests.swift */; };
@@ -48,6 +50,8 @@
 		1894D0F62C8CAA28007011B3 /* QueueRingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRingBuffer.swift; sourceTree = "<group>"; };
 		1894D0F82C8CAA54007011B3 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		1894D0FA2C8CAB07007011B3 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		1894D0FC2C8CC1B9007011B3 /* BinaryNodeProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryNodeProblems.swift; sourceTree = "<group>"; };
+		1894D0FE2C8CCB17007011B3 /* BinaryTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeTest.swift; sourceTree = "<group>"; };
 		18F1F0382C8B72A4001E2B53 /* LeetCodePractise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeetCodePractise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F1F03B2C8B72A4001E2B53 /* LeetCodePractise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodePractise.h; sourceTree = "<group>"; };
 		18F1F03C2C8B72A4001E2B53 /* LeetCodePractise.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LeetCodePractise.docc; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				1894D0F62C8CAA28007011B3 /* QueueRingBuffer.swift */,
 				1894D0F82C8CAA54007011B3 /* DoublyLinkedList.swift */,
 				1894D0FA2C8CAB07007011B3 /* RingBuffer.swift */,
+				1894D0FC2C8CC1B9007011B3 /* BinaryNodeProblems.swift */,
 			);
 			path = LeetCodePractise;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				18F1F0472C8B72A4001E2B53 /* LeetCodePractiseTests.swift */,
 				18F1F0562C8B7365001E2B53 /* LinkedListsTest.swift */,
 				18F1F05C2C8BA147001E2B53 /* ArrayAndStringTest.swift */,
+				1894D0FE2C8CCB17007011B3 /* BinaryTreeTest.swift */,
 			);
 			path = LeetCodePractiseTests;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 				18F1F0552C8B72E5001E2B53 /* Node.swift in Sources */,
 				1894D0F72C8CAA28007011B3 /* QueueRingBuffer.swift in Sources */,
 				1894D0F12C8CA997007011B3 /* QueueArray.swift in Sources */,
+				1894D0FD2C8CC1B9007011B3 /* BinaryNodeProblems.swift in Sources */,
 				1894D0FB2C8CAB07007011B3 /* RingBuffer.swift in Sources */,
 				1894D0F92C8CAA54007011B3 /* DoublyLinkedList.swift in Sources */,
 				18F1F0532C8B72B5001E2B53 /* LinkedList.swift in Sources */,
@@ -260,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1894D0FF2C8CCB17007011B3 /* BinaryTreeTest.swift in Sources */,
 				18F1F0572C8B7365001E2B53 /* LinkedListsTest.swift in Sources */,
 				18F1F0482C8B72A4001E2B53 /* LeetCodePractiseTests.swift in Sources */,
 				18F1F05D2C8BA147001E2B53 /* ArrayAndStringTest.swift in Sources */,
