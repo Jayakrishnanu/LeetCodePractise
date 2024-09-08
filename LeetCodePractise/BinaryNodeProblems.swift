@@ -103,7 +103,7 @@ public class BinaryNodeProblems {
             }
         }
         
-        var leftIndex = rootIndex
+        let leftIndex = rootIndex
         root.leftChild = buildTree(Array(preorder[1..<1 + leftIndex]), Array(inorder[0..<leftIndex + 1]))
         root.rightChild = buildTree(Array(preorder[1 + leftIndex..<totalCount]), Array(inorder[1 + leftIndex..<totalCount]))
         return root
@@ -216,7 +216,7 @@ public class BinaryNodeProblems {
         queue.append(root)
         while !queue.isEmpty {
             var sum = 0.0
-            var count = queue.count
+            let count = queue.count
             for _ in 0..<count {
                 let node = queue.removeFirst()
                 sum += Double(node.value)

@@ -44,7 +44,7 @@ public class LinkedListQuestions {
     
     // Leet: 19 Medium
     
-    func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
+    public func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
         var fast = head
         var slow = head
         var count = n
@@ -66,7 +66,7 @@ public class LinkedListQuestions {
     
     // Leet: 21 Easy
     
-    func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+    public func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         if list1 == nil { return list2 }
         if list2 == nil { return list1 }
         if list1!.val < list2!.val {
@@ -78,9 +78,54 @@ public class LinkedListQuestions {
         }
     }
     
+    // Leet: 22 Medium
+    
+    public func generateParenthesis(_ n: Int) -> [String] {
+        var res: [String] = []
+        func backTrack(_ path: [String], _ target: Int) {
+            if path.count == n * 2 {
+                var str = ""
+                for ch in path {
+                    str += "\(ch)"
+                }
+                res.append(str)
+                return
+            }
+            var count = 0
+            var path = path
+            for c in path where c == "(" { count += 1 }
+            for c in ["(", ")"] {
+                if c == "(" && count >= n || c == ")" && path.count - count >= count { continue }
+                path.append(c)
+                backTrack(path, target - 1)
+                path.remove(at: path.count - 1)
+            }
+        }
+        backTrack([], n * 2)
+        return res
+    }
+    
+    // Leet: 39 Medium
+    
+    public func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {
+        var res: [[Int]] = []
+        var ans: [Int] = []
+        func backTrack(_ remain: Int, _ start: Int, _ ans: inout [Int]) {
+            guard remain >= 0 else { return }
+            guard remain != 0 else { res.append(ans); return }
+            for value in start..<candidates.count {
+                ans.append(candidates[value])
+                backTrack(remain - candidates[value], value, &ans)
+                ans.remove(at: ans.count - 1)
+            }
+        }
+        backTrack(target, 0, &ans)
+        return res
+    }
+    
     // Leet: 61
     
-    func rotateRight(_ head: ListNode?, _ k: Int) -> ListNode? {
+    public func rotateRight(_ head: ListNode?, _ k: Int) -> ListNode? {
         guard head?.next != nil else { return head }
         var current = head
         var count = 1
@@ -98,8 +143,99 @@ public class LinkedListQuestions {
         return newHead
     }
     
+    // Leet: 79 Medium
+    
+    public func exist(_ board: [[Character]], _ word: String) -> Bool {
+        var res = false
+        let chs = reverseIfNeeded(Array(word))
+        if isValid(board, chs) == false { return false }
+        func backTrack(_ path: [[Int]], _ position: [Int], _ target: Int) {
+            if res || path.count == target  { res  = true;  return }
+            let char = chs[path.count]
+            let position = next(board, position, char)
+            var path = path
+        }
+        
+        func next(_ board: [[Character]], _ position: [Int], _ char: Character) -> [[Int]] {
+            var res: [[Int]] = []
+            
+            if position[0] == -1 {
+                for i in 0..<board.count {
+                    for j in 0..<board[0].count {
+                        if board[i][j] == char {
+                            res.append([i, j])
+                        }
+                    }
+                }
+            } else {
+                var c: Character = " "
+                if position[0] > 0 {
+                    let i = position[0] - 1
+                    let j = position[1]
+                    c = board[i][j]
+                    c == char ? res.append([i, j]) : ()
+                }
+                
+                if position[0] < board.count - 1 {
+                    let i = position[0] + 1
+                    let j = position[1]
+                    c = board[i][j]
+                    c == char ? res.append([i, j]) : ()
+                }
+                
+                if position[1] > 0 {
+                    let i = position[0]
+                    let j = position[1] - 1
+                    c = board[i][j]
+                    c == char ? res.append([i, j]) : ()
+                }
+                
+                if position[1] < board[0].count - 1 {
+                    let i = position[0]
+                    let j = position[1] + 1
+                    c = board[i][j]
+                    c == char ? res.append([i, j]) : ()
+                }
+            }
+            return res
+        }
+        
+        func isValid(_ board: [[Character]], _ chars: [Character]) -> Bool {
+        var res = true
+        loop1: for c in chars {
+            var temp = false
+        loop2: for i in 0..<board.count {
+            for j in 0..<board[0].count {
+                if board[i][j] == c { temp = true; break loop2 }
+            }
+        }
+            if temp == false  { res = false; break loop1 }
+        }
+            return res
+        }
+        
+        func reverseIfNeeded(_ chars: [Character]) -> [Character] {
+            var headCount = 0
+            var tailCount = 0
+            for c in chars {
+                if c == chars[0] {
+                    headCount += 1
+                }
+                if c == chars[chars.count - 1] {
+                    tailCount += 1
+                }
+            }
+            if tailCount < headCount {
+                return chars.reversed()
+            } else {
+                return chars
+            }
+        }
+        return res
+    }
+    
     // Leet: 82
-    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+    public func deleteDuplicates(_ head: ListNode?) -> ListNode? {
         let dummy: ListNode? = ListNode(-1)
         dummy?.next = head
         var current = dummy
@@ -119,7 +255,7 @@ public class LinkedListQuestions {
     
     // Leet: 86 Medium
     
-    func partition(_ head: ListNode?, _ x: Int) -> ListNode? {
+    public func partition(_ head: ListNode?, _ x: Int) -> ListNode? {
         let current = head
         var look = head
         
@@ -138,7 +274,7 @@ public class LinkedListQuestions {
     }
     
     // Leet: 92 Medium
-    func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+    public func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
         let left_head = head
         var left_tail: ListNode?
         var current = head
@@ -256,7 +392,7 @@ public class LinkedListQuestions {
     }
     
     // Leet: 3063
-    func frequenciesOfElements(_ head: ListNode?) -> ListNode? {
+    public func frequenciesOfElements(_ head: ListNode?) -> ListNode? {
         var freq: [Int: Int] = [:]
         var node = head
         
