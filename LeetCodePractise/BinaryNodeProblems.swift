@@ -207,6 +207,72 @@ public class BinaryNodeProblems {
             return nil
         }
     }
+    // Leet: 501
+    func findMode(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
+        var dict: [Int: Int] = [:]
+        var stack = [root]
+        while let node = stack.popLast() {
+            dict[node.value, default: 0] += 1
+            if let left = node.leftChild { stack.append(left) }
+            if let right = node.rightChild { stack.append(right) }
+        }
+        let maxCount = dict.values.max()
+        return dict.keys.compactMap { dict[$0, default: 0] == maxCount ? $0 : nil }
+    }
+    
+    // Leet: 508 Medium
+    public func findFrequentTreeSum(_ root: TreeNode?) -> [Int] {
+        var map : [Int: Int] = [:]
+        var maxFrequency = Int.min
+        
+        func postOrder(_ node: TreeNode) -> Int {
+            var sum = node.value
+            if let leftNode = node.leftChild {
+                sum += postOrder(leftNode)
+            }
+            if let rightNode = node.rightChild {
+                sum += postOrder(rightNode)
+            }
+            
+            map[sum, default: 0] += 1
+            if maxFrequency < map[sum]! {
+                maxFrequency = map[sum]!
+            }
+            return sum
+        }
+        
+        guard let root = root else { return [] }
+        let _ = postOrder(root)
+        var ans  = [Int]()
+        for (key,val) in map {
+            if val == maxFrequency {
+                ans.append(key)
+            }
+        }
+        return ans
+    }
+    
+    // Leet: 530 Easy
+    
+    func getMinimumDifference(_ root: TreeNode?) -> Int {
+        var difference = Int.max
+        var previousNodeValue: Int?
+        
+        func inOrderTraversal(_ node: TreeNode?) {
+            guard let currentNode = node else {
+                return
+            }
+            inOrderTraversal(currentNode.leftChild)
+            if let value = previousNodeValue {
+                difference = min(difference, abs(currentNode.value - value))
+            }
+            previousNodeValue = currentNode.value
+            inOrderTraversal(currentNode.rightChild)
+        }
+        inOrderTraversal(root)
+        return difference
+    }
     
     // Leet: 637 Medium
     func averageOfLevels(_ root: TreeNode?) -> [Double] {
@@ -231,27 +297,6 @@ public class BinaryNodeProblems {
             result.append(sum / Double(count))
         }
         return result
-    }
-    
-    // Leet: 530 Easy
-    
-    func getMinimumDifference(_ root: TreeNode?) -> Int {
-        var difference = Int.max
-        var previousNodeValue: Int?
-        
-        func inOrderTraversal(_ node: TreeNode?) {
-            guard let currentNode = node else {
-                return
-            }
-            inOrderTraversal(currentNode.leftChild)
-            if let value = previousNodeValue {
-                difference = min(difference, abs(currentNode.value - value))
-            }
-            previousNodeValue = currentNode.value
-            inOrderTraversal(currentNode.rightChild)
-        }
-        inOrderTraversal(root)
-        return difference
     }
     
 }

@@ -133,7 +133,7 @@ public class ArrayAndString {
         return profit
     }
     
-    // Leet 45 
+    // Leet 45
     public func canJump(_ nums: [Int]) -> Bool {
         var i = 0
         var end = 0
@@ -193,6 +193,31 @@ public class ArrayAndString {
         
         return result
     }
+    // Leet: 507 Easy
     
-
+    public func checkPerfectNumber(_ num: Int) -> Bool {
+        var divisors: [Int] = []
+        var i = 1
+        while i < num {
+            if num % i == 0 {
+                divisors.append(i)
+            }
+            i += 1
+        }
+        let val = divisors.reduce(0, +)
+        return val == num
+    }
+    
+    // Leet: 509 Easy
+    public func fib(_ n: Int) -> Int {
+           var dp = Array(repeating: 0, count: n+1)
+           dp[0] = 0
+           dp[1] = 1
+           for i in 2...n {
+               dp[i] = dp[i-2] + dp[i-1]
+           }
+           return dp[n]
+       }
+    
+    
 }

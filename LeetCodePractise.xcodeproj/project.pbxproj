@@ -20,6 +20,9 @@
 		1894D0FF2C8CCB17007011B3 /* BinaryTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D0FE2C8CCB17007011B3 /* BinaryTreeTest.swift */; };
 		1894D1012C8D200E007011B3 /* BackTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D1002C8D200E007011B3 /* BackTracking.swift */; };
 		1894D1032C8D3110007011B3 /* KadaneAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D1022C8D3110007011B3 /* KadaneAlgorithm.swift */; };
+		1894D1052C8D6A04007011B3 /* DivideAndConquer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D1042C8D6A04007011B3 /* DivideAndConquer.swift */; };
+		1894D1072C8F6247007011B3 /* StackPractise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D1062C8F6247007011B3 /* StackPractise.swift */; };
+		1894D1092C90819C007011B3 /* StringProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D1082C90819C007011B3 /* StringProblems.swift */; };
 		18F1F03D2C8B72A4001E2B53 /* LeetCodePractise.docc in Sources */ = {isa = PBXBuildFile; fileRef = 18F1F03C2C8B72A4001E2B53 /* LeetCodePractise.docc */; };
 		18F1F0432C8B72A4001E2B53 /* LeetCodePractise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F1F0382C8B72A4001E2B53 /* LeetCodePractise.framework */; };
 		18F1F0482C8B72A4001E2B53 /* LeetCodePractiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1F0472C8B72A4001E2B53 /* LeetCodePractiseTests.swift */; };
@@ -56,6 +59,9 @@
 		1894D0FE2C8CCB17007011B3 /* BinaryTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeTest.swift; sourceTree = "<group>"; };
 		1894D1002C8D200E007011B3 /* BackTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTracking.swift; sourceTree = "<group>"; };
 		1894D1022C8D3110007011B3 /* KadaneAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadaneAlgorithm.swift; sourceTree = "<group>"; };
+		1894D1042C8D6A04007011B3 /* DivideAndConquer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideAndConquer.swift; sourceTree = "<group>"; };
+		1894D1062C8F6247007011B3 /* StackPractise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackPractise.swift; sourceTree = "<group>"; };
+		1894D1082C90819C007011B3 /* StringProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProblems.swift; sourceTree = "<group>"; };
 		18F1F0382C8B72A4001E2B53 /* LeetCodePractise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeetCodePractise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F1F03B2C8B72A4001E2B53 /* LeetCodePractise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodePractise.h; sourceTree = "<group>"; };
 		18F1F03C2C8B72A4001E2B53 /* LeetCodePractise.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LeetCodePractise.docc; sourceTree = "<group>"; };
@@ -127,6 +133,9 @@
 				1894D0FC2C8CC1B9007011B3 /* BinaryNodeProblems.swift */,
 				1894D1002C8D200E007011B3 /* BackTracking.swift */,
 				1894D1022C8D3110007011B3 /* KadaneAlgorithm.swift */,
+				1894D1042C8D6A04007011B3 /* DivideAndConquer.swift */,
+				1894D1062C8F6247007011B3 /* StackPractise.swift */,
+				1894D1082C90819C007011B3 /* StringProblems.swift */,
 			);
 			path = LeetCodePractise;
 			sourceTree = "<group>";
@@ -257,6 +266,7 @@
 				18F1F0552C8B72E5001E2B53 /* Node.swift in Sources */,
 				1894D0F72C8CAA28007011B3 /* QueueRingBuffer.swift in Sources */,
 				1894D0F12C8CA997007011B3 /* QueueArray.swift in Sources */,
+				1894D1052C8D6A04007011B3 /* DivideAndConquer.swift in Sources */,
 				1894D0FD2C8CC1B9007011B3 /* BinaryNodeProblems.swift in Sources */,
 				1894D0FB2C8CAB07007011B3 /* RingBuffer.swift in Sources */,
 				1894D0F92C8CAA54007011B3 /* DoublyLinkedList.swift in Sources */,
@@ -264,6 +274,8 @@
 				1894D0F32C8CA9AD007011B3 /* Queue.swift in Sources */,
 				1894D0F52C8CAA0E007011B3 /* QueueStack.swift in Sources */,
 				18F1F0592C8B7AB2001E2B53 /* LinkedListQuestions.swift in Sources */,
+				1894D1092C90819C007011B3 /* StringProblems.swift in Sources */,
+				1894D1072C8F6247007011B3 /* StackPractise.swift in Sources */,
 				18F1F03D2C8B72A4001E2B53 /* LeetCodePractise.docc in Sources */,
 				1894D1032C8D3110007011B3 /* KadaneAlgorithm.swift in Sources */,
 				1894D0EB2C8CA8F5007011B3 /* BinaryNode.swift in Sources */,

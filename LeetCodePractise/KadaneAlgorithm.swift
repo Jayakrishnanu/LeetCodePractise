@@ -26,5 +26,26 @@ public class KadaneAlgorithm {
         return maxValue
     }
     
-    // 
+    // Leet: 418 Medium
+    func maxSubarraySumCircular(_ nums: [Int]) -> Int {
+        var globalMax = nums[0]
+        var globalMin = nums[0]
+        var curMax = 0
+        var curMin = 0
+        var total = 0
+        for num in nums {
+            curMax = max(curMax, 0)
+            curMax += num
+            curMin = min(curMin, 0)
+            curMin += num
+            total += num
+            globalMax = max(globalMax, curMax)
+            globalMin = min(globalMin, curMin)
+        }
+        if globalMax < 0 {
+            return globalMax
+        } else {
+            return max(globalMax, total - globalMin)
+        }
+    }
 }
